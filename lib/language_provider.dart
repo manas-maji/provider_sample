@@ -30,7 +30,7 @@ class LanguageProvider with ChangeNotifier {
 
       default:
         _language = Language.fromJson(
-            await _getJson('lib/intl/us-en.json'), languageCode);
+            await _getJson('lib/intl/eng.json'), languageCode);
         break;
     }
     _updatePrefs(languageCode);
