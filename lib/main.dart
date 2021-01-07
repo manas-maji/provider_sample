@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:provider_sample/language_provider.dart';
+import 'package:flutter_riverpod/all.dart';
 
 import 'home_page.dart';
 
@@ -11,8 +10,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (_) => LanguageProvider(),
+    return ProviderScope(
       child: MaterialApp(
         title: 'Provider Sample',
         theme: ThemeData(
